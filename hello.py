@@ -2,7 +2,7 @@
 
 import random
 NUM_DIGITS = 3 #adjust for difficulty
-MAX_GUESSES = 6 # adjust for difficulty
+MAX_GUESSES = 20 # adjust for difficulty
 
 def main():
     print('''A deductive logic game. I  am thinking of a {}-digit number with no repeated digits. Try to guess what it is. Here are some clues:
