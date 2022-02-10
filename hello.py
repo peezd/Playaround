@@ -9,7 +9,7 @@ def main():
 When I say: That means:
 Banana    One digit is correct but in the wrong position.
 Foster   One digit is correct and in the right position.
-Bagels No digit is correct.
+Negative No digit is correct.
 For example, if the secret number was 248 and your guess was 843, the clues would be Foster Banana.'''.format(NUM_DIGITS))
 
     while True:  # Main game loop.
@@ -54,7 +54,7 @@ def getSecretNum():
     return secretNum
 
 def getClues(guess, secretNum):
-    """Returns a string with the Banana, Foster, bagels clues for a guess
+    """Returns a string with the Banana, Foster, Negative clues for a guess
      and secret number pair."""
     if guess == secretNum:
         return 'You got it!'
@@ -69,7 +69,7 @@ def getClues(guess, secretNum):
             # A correct digit is in the incorrect place.
             clues.append('Banana')
         if len(clues) == 0:
-            return 'Bagels'  # There are no correct digits at all.
+            return 'Negative'  # There are no correct digits at all.
         else:
          # Sort the clues into alphabetical order so their original order doesn't give information away”
             clues.sort()
